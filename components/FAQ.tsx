@@ -1,7 +1,9 @@
 
+"use client";
+
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
-import { FAQS } from '../constants';
+import { FAQS } from '../lib/constants';
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

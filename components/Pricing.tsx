@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Check, Info } from 'lucide-react';
-import { PRICING_PLANS } from '../constants';
+import { Check } from 'lucide-react';
+import { PRICING_PLANS } from '../lib/constants';
 
 const Pricing: React.FC = () => {
   return (

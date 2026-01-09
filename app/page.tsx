@@ -1,20 +1,25 @@
 
-import React, { useState, useEffect } from 'react';
-import { Phone, ChevronDown, Play, MessageSquare, Menu, X, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Benefits from './components/Benefits';
-import Process from './components/Process';
-import StatsSection from './components/StatsSection';
-import Testimonials from './components/Testimonials';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+"use client";
 
-const App: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { Phone } from 'lucide-react';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Benefits from '../components/Benefits';
+import Process from '../components/Process';
+import StatsSection from '../components/StatsSection';
+import Testimonials from '../components/Testimonials';
+import Pricing from '../components/Pricing';
+import FAQ from '../components/FAQ';
+import Footer from '../components/Footer';
+
+export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    // Set document title since Next.js metadata doesn't auto-apply in this client-side environment
+    document.title = "Ad VDO Made Easy | Bengal's No.1 Video Agency";
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -23,7 +28,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-red-500 selection:text-white">
+    <div className="min-h-screen bg-black text-white">
       <Navbar isScrolled={isScrolled} />
       
       <main>
@@ -66,6 +71,4 @@ const App: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default App;
+}
